@@ -176,7 +176,7 @@ then dividing by the normalization constant.
 .. code-block:: python
 
 
-    # Softmax is also in torch.functional
+    # Softmax is also in torch.nn.functional
     data = autograd.Variable(torch.randn(5))
     print(data)
     print(F.softmax(data))
@@ -411,7 +411,7 @@ softmax.
 
  Out::
 
-    {'Yo': 23, 'on': 25, 'una': 13, 'que': 11, 'en': 3, 'get': 20, 'to': 8, 'me': 0, 'it': 7, 'No': 9, 'buena': 14, 'lost': 21, 'si': 24, 'not': 17, 'a': 18, 'at': 22, 'gusta': 1, 'idea': 15, 'la': 4, 'is': 16, 'creo': 10, 'Give': 6, 'cafeteria': 5, 'comer': 2, 'sea': 12, 'good': 19}
+    {'on': 25, 'idea': 15, 'sea': 12, 'que': 11, 'la': 4, 'it': 7, 'gusta': 1, 'si': 24, 'at': 22, 'get': 20, 'Give': 6, 'comer': 2, 'No': 9, 'cafeteria': 5, 'en': 3, 'is': 16, 'buena': 14, 'not': 17, 'una': 13, 'Yo': 23, 'to': 8, 'lost': 21, 'a': 18, 'creo': 10, 'good': 19, 'me': 0}
     Parameter containing:
 
     Columns 0 to 9 
@@ -568,7 +568,7 @@ has to offer.
 
 
 
-**Total running time of the script:** ( 0 minutes  0.217 seconds)
+**Total running time of the script:** ( 0 minutes  0.222 seconds)
 
 
 

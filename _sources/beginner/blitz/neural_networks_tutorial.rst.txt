@@ -150,7 +150,7 @@ The input to the forward is an ``autograd.Variable``, and so is the output.
  Out::
 
     Variable containing:
-     0.0610  0.0762 -0.0611  0.0363  0.0445 -0.0091  0.0650 -0.0223 -0.1112 -0.0525
+     0.0184 -0.0314 -0.1252  0.0939  0.0179  0.1218  0.0024  0.0724 -0.1241 -0.1183
     [torch.FloatTensor of size 1x10]
 
 
@@ -199,7 +199,7 @@ Before proceeding further, let's recap all the classes you’ve seen so far.
   -  ``autograd.Function`` - Implements *forward and backward definitions
      of an autograd operation*. Every ``Variable`` operation, creates at
      least a single ``Function`` node, that connects to functions that
-     created a ``Variable`` and *encodes its history**.
+     created a ``Variable`` and *encodes its history*.
 
 **At this point, we covered:**
   -  Defining a neural network
@@ -243,7 +243,7 @@ For example:
  Out::
 
     Variable containing:
-     38.6850
+     38.6931
     [torch.FloatTensor of size 1]
 
 
@@ -281,9 +281,9 @@ For illustration, let us follow a few steps backward:
 
  Out::
 
-    <torch.autograd.function.MSELossBackward object at 0x7faa6602d7c8>
-    <torch.autograd.function.AddmmBackward object at 0x7faa6602d6d8>
-    <AccumulateGrad object at 0x7faa661e29b0>
+    <torch.autograd.function.MSELossBackward object at 0x7fbe08423048>
+    <torch.autograd.function.AddmmBackward object at 0x7fbe08410e58>
+    <AccumulateGrad object at 0x7fbe08403400>
 
 
 Backprop
@@ -333,12 +333,12 @@ gradients before and after the backward.
     conv1.bias.grad after backward
     Variable containing:
     1.00000e-02 *
-     -6.2994
-      3.6152
-      5.7532
-      8.8666
-      3.9626
-     -2.0838
+      1.9986
+     -1.7405
+      2.1624
+     -0.4565
+     -3.3579
+      1.2404
     [torch.FloatTensor of size 6]
 
 
@@ -396,7 +396,7 @@ implements all these methods. Using it is very simple:
 
 
 
-**Total running time of the script:** ( 0 minutes  0.079 seconds)
+**Total running time of the script:** ( 0 minutes  0.817 seconds)
 
 
 
